@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'LandingPageController@index']);
+Route::post('/', ['uses' => 'LandingPageController@store', 'as' => 'landing.store']);
