@@ -54,7 +54,20 @@
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
                 <div class="content-wrapper">
-                    <form action="{{ route('landing.store') }}">
+                    @if (Session::has('success'))
+                        <div class="alert alert-success">
+                            <strong>Success:</strong> {{ Session::get('success') }}
+                        </div>
+                    @endif
+                    @if (count($errors) > 0)
+                        <div class="alert alert-danger" role="alert">
+                            @foreach($errors->all() as $error)
+                                {{ $error }}
+                            @endforeach
+                        </div>
+                    @endif
+                    <form action="{{ route('subscription.store') }}" method="post">
+                        {{ csrf_field() }}
                         <div class="row">
                             <div class="col-md-8">
                                 <input type="email" class="form-control" name="email" required="true"
@@ -72,7 +85,9 @@
         <br>
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <a class="github-button" href="https://github.com/vatsimgoodies" data-size="large" data-show-count="true" aria-label="Follow @vatsimgoodies on GitHub">Follow @vatsimgoodies on Github</a><br>
+                <a class="github-button" href="https://github.com/vatsimgoodies" data-size="large"
+                   data-show-count="true" aria-label="Follow @vatsimgoodies on GitHub">Follow @vatsimgoodies on
+                    Github</a><br>
             </div>
         </div>
     </div>

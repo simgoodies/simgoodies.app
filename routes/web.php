@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', ['uses' => 'LandingPageController@index']);
-Route::post('/', ['uses' => 'LandingPageController@store', 'as' => 'landing.store']);
+Route::get('/', ['uses' => 'LandingPageController@index', 'as' => 'landing.show']);
+Route::post('/', ['uses' => 'SubscriptionController@store', 'as' => 'subscription.store']);
