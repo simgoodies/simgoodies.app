@@ -15,3 +15,4 @@ yarn-error.log
 .env
 .env.testing
 /Envoy.blade.php
+!/public/images/
