@@ -21,8 +21,11 @@ class SubscriptionTest extends TestCase
             'email' => 'roelgonzalez@example.org'
         ]);
 
+        $subscription = Subscription::all()->first();
+
         $this->assertCount(1, Subscription::all());
         $this->assertEquals('roelgonzalez@example.org', Subscription::find(1)->email);
+        $this->assertEquals(false, $subscription->confirmed);
     }
 
     /** @test */
@@ -39,5 +42,25 @@ class SubscriptionTest extends TestCase
         $response->assertSessionHasErrors('email');
 
         $this->assertCount(1, Subscription::all());
+    }
+
+    /** @test */
+    function it_can_confirm_its_subscription()
+    {
+        $this->withoutExceptionHandling();
+
+        factory('App\Models\Subscription')->create([
+            'token' => $token = md5(now()->timestamp),
+            'confirmed' => false
+        ]);
+
+        $unconfirmedSubscription = Subscription::first();
+        $this->assertEquals(false, $unconfirmedSubscription->confirmed);
+
+        $response = $this->get('confirm-subscription/' . $token);
+        $response->assertRedirect('/');
+
+        $confirmedSubscription = Subscription::first();
+        $this->assertEquals(true, $confirmedSubscription->confirmed);
     }
 }

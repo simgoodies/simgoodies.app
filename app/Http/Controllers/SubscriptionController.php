@@ -3,19 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSubscription;
-use App\Models\Subscription;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
+use App\Services\SubscriptionService;
 
 class SubscriptionController extends Controller
 {
-    public function store(StoreSubscription $request)
+    public function store(StoreSubscription $request, SubscriptionService $subscriptionService)
     {
-        $subscription = new Subscription();
-        $subscription->email = $request->email;
-        $subscription->save();
-
-        Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com');
+        $subscriptionService->processSubscriptionRequest($request);
 
         return redirect()->route('landing.show');
     }

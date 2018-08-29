@@ -13,3 +13,4 @@
 
 Route::get('/', ['uses' => 'LandingPageController@index', 'as' => 'landing.show']);
 Route::post('/', ['uses' => 'SubscriptionController@store', 'as' => 'subscription.store']);
+Route::get('confirm-subscription/{token}', ['uses' => 'SubscriptionConfirmationController@store', 'as' => 'confirmation.store']);
