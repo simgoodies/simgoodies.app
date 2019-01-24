@@ -4,7 +4,7 @@
 You have requested to stay up to date of events happening surrounding VATGoodies, confirm your subscription by clicking the button below.
 
 @component('mail::button', ['url' => url('confirm-subscription/' . $token)])
-Button Text
+Confirm subscription
 @endcomponent
 
 If you can not see the button, copy and paste the following link in your browser:<br>
