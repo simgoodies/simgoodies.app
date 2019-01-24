@@ -2,9 +2,11 @@
 
 namespace Tests\Feature;
 
+use App\Mail\ConfirmYourSubscription;
 use App\Models\Subscription;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -62,5 +64,17 @@ class SubscriptionTest extends TestCase
 
         $confirmedSubscription = Subscription::first();
         $this->assertEquals(true, $confirmedSubscription->confirmed);
+    }
+
+    /** @test */
+    function it_can_send_an_email_for_confirmation()
+    {
+        Mail::fake();
+
+        $this->post('/', [
+            'email' => 'roelgonzalez@example.org'
+        ]);
+
+        Mail::assertSent(ConfirmYourSubscription::class);
     }
 }

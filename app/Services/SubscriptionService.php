@@ -3,7 +3,9 @@
 namespace App\Services;
 
 use App\Http\Requests\StoreSubscription;
+use App\Mail\ConfirmYourSubscription;
 use App\Models\Subscription;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class SubscriptionService
@@ -16,7 +18,9 @@ class SubscriptionService
         $subscription->token = md5(now()->timestamp);
         $subscription->save();
 
-        Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com');
+        Mail::to($request->email)->send(new ConfirmYourSubscription($subscription->token));
+
+        Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com. Please check your inbox to confirm your subscription.');
 
         return $subscription;
     }
@@ -29,7 +33,7 @@ class SubscriptionService
 
         $subscription->save();
 
-        Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com. Please check your inbox to confirm your subscription');
+        Session::flash('success', 'You have successfully confirmed your subscription to stay posted about VATGoodies.com');
 
         return $subscription;
     }
