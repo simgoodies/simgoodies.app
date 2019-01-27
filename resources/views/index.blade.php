@@ -90,6 +90,11 @@
                     Github</a><br>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <p>VATGoodies.com - @version('full')</p>
+            </div>
+        </div>
     </div>
 
 </div>
