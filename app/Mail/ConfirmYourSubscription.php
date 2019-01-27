@@ -30,7 +30,7 @@ class ConfirmYourSubscription extends Mailable
      */
     public function build()
     {
-        return $this->from('no-reply@vatgoodies.com', 'VATGoodies')
+        return $this->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
             ->subject('Confirm your subscription to VATGoodies')
             ->markdown('emails.subscriptions.confirm',['token' => $this->token]);
     }
