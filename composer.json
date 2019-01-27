@@ -11,7 +11,6 @@
         "laravel/envoy": "^1.4",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "pragmarx/version": "^0.2.8"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

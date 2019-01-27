@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Bugsnag::setAppVersion(app(Version::class)->format('version'));
+        //
     }
 
     /**

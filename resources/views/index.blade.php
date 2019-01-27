@@ -92,7 +92,7 @@
         </div>
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <p>VATGoodies.com - @version('full')</p>
+                <p>VATGoodies.com - version {{ config('app.version') }}</p>
             </div>
         </div>
     </div>
