@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 use Illuminate\Support\ServiceProvider;
+use PragmaRX\Version\Package\Version;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Bugsnag::setAppVersion(app(Version::class)->format('version'));
     }
 
     /**
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if ($this->app->environment() == ('production' || 'staging')) {
+            $this->app->alias('bugsnag.multi', \Illuminate\Contracts\Logging\Log::class);
+            $this->app->alias('bugsnag.multi', \Psr\Log\LoggerInterface::class);
+        }
     }
 }
