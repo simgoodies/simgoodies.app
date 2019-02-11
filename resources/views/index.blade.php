@@ -26,7 +26,7 @@
         <div class="row">
             <div class="offset-md-1 col-md-10">
                 <img src="images/logo/main-logo.png" alt="VATGoodies Logo" width="800" height="400"
-                     class="img-responsive">
+                     class="img-fluid">
             </div>
         </div>
         <div class="row">
