@@ -8,8 +8,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class SubscriptionTest extends TestCase
 {
@@ -17,10 +15,10 @@ class SubscriptionTest extends TestCase
     use WithoutMiddleware;
 
     /** @test */
-    function it_can_subscribe_to_stay_posted()
+    public function it_can_subscribe_to_stay_posted()
     {
         $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'roelgonzalez@example.org',
         ]);
 
         $subscription = Subscription::all()->first();
@@ -31,14 +29,14 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    function it_can_not_subscribe_twice()
+    public function it_can_not_subscribe_twice()
     {
         $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'roelgonzalez@example.org',
         ]);
 
         $response = $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'roelgonzalez@example.org',
         ]);
 
         $response->assertSessionHasErrors('email');
@@ -47,19 +45,19 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    function it_can_confirm_its_subscription()
+    public function it_can_confirm_its_subscription()
     {
         $this->withoutExceptionHandling();
 
         factory('App\Models\Subscription')->create([
-            'token' => $token = md5(now()->timestamp),
-            'confirmed' => false
+            'token'     => $token = md5(now()->timestamp),
+            'confirmed' => false,
         ]);
 
         $unconfirmedSubscription = Subscription::first();
         $this->assertEquals(false, $unconfirmedSubscription->confirmed);
 
-        $response = $this->get('confirm-subscription/' . $token);
+        $response = $this->get('confirm-subscription/'.$token);
         $response->assertRedirect('/');
 
         $confirmedSubscription = Subscription::first();
@@ -67,12 +65,12 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    function it_can_send_an_email_for_confirmation()
+    public function it_can_send_an_email_for_confirmation()
     {
         Mail::fake();
 
         $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'roelgonzalez@example.org',
         ]);
 
         Mail::assertSent(ConfirmYourSubscription::class);

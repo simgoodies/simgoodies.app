@@ -24,12 +24,12 @@ class StoreSubscription extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|email|unique:subscriptions,email'
+            'email' => 'required|email|unique:subscriptions,email',
         ];
     }
 
     /**
-     * The validation messages
+     * The validation messages.
      *
      * @return array
      */
@@ -37,8 +37,8 @@ class StoreSubscription extends FormRequest
     {
         return [
             'email.required' => 'The e-mail field is required',
-            'email.email' => 'Please enter valid e-mail',
-            'email.unique' => 'The e-mail has already been subscribed'
+            'email.email'    => 'Please enter valid e-mail',
+            'email.unique'   => 'The e-mail has already been subscribed',
         ];
     }
 }

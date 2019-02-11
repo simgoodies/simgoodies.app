@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use PragmaRX\Version\Package\Version;
 
 class AppServiceProvider extends ServiceProvider
 {

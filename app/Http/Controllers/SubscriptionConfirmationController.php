@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\SubscriptionService;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class SubscriptionConfirmationController extends Controller

@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class SubscriptionService
-
 {
     public function processSubscriptionRequest(StoreSubscription $request)
     {
