@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
 use Illuminate\Support\ServiceProvider;
 use PragmaRX\Version\Package\Version;
 

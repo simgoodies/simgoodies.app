@@ -24,22 +24,18 @@
 <div class="container">
     <div class="content-wrapper">
         <div class="row">
-            <br>
-            <br>
-            <br>
-            <div class="col-md-offset-1 col-md-10">
+            <div class="offset-md-1 col-md-10">
                 <img src="images/logo/main-logo.png" alt="VATGoodies Logo" width="800" height="400"
                      class="img-responsive">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-offset-4 col-md-8">
+            <div class="offset-md-4 col-md-8">
                 <h2>presents Real Ops!</h2>
             </div>
         </div>
-        <br>
         <div class="row">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="offset-md-3 col-md-6">
                 <p>VATGoodies Real Ops will allow your FIR / ARTCC to organize the real ops event that you always wanted
                     to organize! Organize your event, add the focus airports, place the flights and enjoy real ops the
                     way it should be enjoyed!</p>
@@ -51,8 +47,8 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-offset-3 col-md-6">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div class="content-wrapper">
                     @if (Session::has('success'))
                         <div class="alert alert-success">
@@ -68,6 +64,7 @@
                     @endif
                     <form action="{{ route('subscription.store') }}" method="post">
                         {{ csrf_field() }}
+                        @honeypot
                         <div class="row">
                             <div class="col-md-8">
                                 <input type="email" class="form-control" name="email" required="true"
@@ -84,14 +81,14 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="offset-md-3 col-md-6">
                 <a class="github-button" href="https://github.com/vatsimgoodies" data-size="large"
                    data-show-count="true" aria-label="Follow @vatsimgoodies on GitHub">Follow @vatsimgoodies on
                     Github</a><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-offset-3 col-md-6">
+            <div class="offset-md-3 col-md-6">
                 <p>VATGoodies.com - version {{ config('app.version') }}</p>
             </div>
         </div>
