@@ -5,7 +5,6 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ConfirmYourSubscription extends Mailable
 {
@@ -32,6 +31,6 @@ class ConfirmYourSubscription extends Mailable
     {
         return $this->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
             ->subject('Confirm your subscription to VATGoodies')
-            ->markdown('emails.subscriptions.confirm',['token' => $this->token]);
+            ->markdown('emails.subscriptions.confirm', ['token' => $this->token]);
     }
 }

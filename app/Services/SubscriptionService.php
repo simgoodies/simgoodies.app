@@ -2,14 +2,13 @@
 
 namespace App\Services;
 
-use App\Http\Requests\StoreSubscription;
-use App\Mail\ConfirmYourSubscription;
 use App\Models\Subscription;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ConfirmYourSubscription;
 use Illuminate\Support\Facades\Session;
+use App\Http\Requests\StoreSubscription;
 
 class SubscriptionService
-
 {
     public function processSubscriptionRequest(StoreSubscription $request)
     {
