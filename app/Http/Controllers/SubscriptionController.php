@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSubscription;
 use App\Services\SubscriptionService;
+use App\Http\Requests\StoreSubscription;
 
 class SubscriptionController extends Controller
 {
