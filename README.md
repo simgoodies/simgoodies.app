@@ -1,7 +1,6 @@
 [![StyleCI](https://github.styleci.io/repos/121784641/shield?branch=develop)](https://github.styleci.io/repos/121784641)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/367a3d1bf509419aa1942d51c9fcb3c0)](https://www.codacy.com/app/roelgonzalez/vatgoodies.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vatsimgoodies/vatgoodies.com&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![HitCount](http://hits.dwyl.io/vatsimgoodies/vatgoodies.com.svg)](http://hits.dwyl.io/vatsimgoodies/vatgoodies.com)
 
 
 ## VATGoodies.com
