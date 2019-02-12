@@ -37,12 +37,12 @@
         <div class="row">
             <div class="offset-md-3 col-md-6">
                 <p>VATGoodies Real Ops will allow your FIR / ARTCC to organize the real ops event that you always wanted
-                    to organize! Organize your event, add the focus airports, place the flights and enjoy real ops the
+                    to organize! Organize your event, place the flights, watch them be booked and enjoy real ops the
                     way it should be enjoyed!</p>
                 <ul>
                     <li>Easily organize and manage your real ops event!</li>
                     <li>No hassle flight booking for pilots!</li>
-                    <li>Everyone uses VATSIM SSO for login!</li>
+                    <li>Everyone uses VATSIM SSO for login! (pending)</li>
                     <li>and many awesome ideas in the pipeline!</li>
                 </ul>
             </div>
@@ -65,17 +65,36 @@
                     <form action="{{ route('subscription.store') }}" method="post">
                         {{ csrf_field() }}
                         @honeypot
-                        <div class="row">
-                            <div class="col-md-8">
+                        <div class="row mt-md-n2">
+                            <div class="col-md-8 mt-2">
                                 <input type="email" class="form-control" name="email" required="true"
                                        value="{{ old('email') }}"
                                        placeholder="Enter your email address to stay posted!">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-2">
                                 <button type="submit" class="btn btn-success btn-block">Keep me posted!</button>
                             </div>
                         </div>
                     </form>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <a class="typeform-share link btn btn-success btn-block text-da" href="https://rolgonzalez.typeform.com/to/CjREly"
+                               data-mode="popup"
+                               data-hide-headers=true data-hide-footer=true data-submit-close-delay="5" target="_blank">Contact VATGoodies</a>
+                            <script> (function () {
+                                    var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
+                                        gt = d.getElementsByTagName, id = "typef_orm_share",
+                                        b = "https://embed.typeform.com/";
+                                    if (!gi.call(d, id)) {
+                                        js = ce.call(d, "script");
+                                        js.id = id;
+                                        js.src = b + "embed.js";
+                                        q = gt.call(d, "script")[0];
+                                        q.parentNode.insertBefore(js, q)
+                                    }
+                                })() </script>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
