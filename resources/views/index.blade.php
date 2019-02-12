@@ -7,6 +7,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>VATGoodies.com - let us lift the weight!</title> <!-- CHANGE THIS TITTLE FOR EACH PAGE -->
 
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134452334-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-134452334-1');
+    </script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
