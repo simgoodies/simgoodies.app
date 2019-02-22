@@ -122,15 +122,23 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="offset-md-3 col-md-6">
-                <a class="github-button" href="https://github.com/vatsimgoodies" data-size="large"
-                   data-show-count="true" aria-label="Follow @vatsimgoodies on GitHub">Follow @vatsimgoodies on
-                    Github</a><br>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-3">
+                <a href="https://discord.gg/aQkKcf5"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}" alt="Join us on Discord"></a>
+            </div>
+            <div class="col-md-3">
+                <a class="github-button" href="https://github.com/vatsimgoodies/vatsim-real-ops" data-size="large" data-show-count="true" aria-label="Star vatsimgoodies/vatsim-real-ops on GitHub">Star on GitHub!</a>
             </div>
         </div>
-        <div class="row">
-            <div class="offset-md-3 col-md-6">
+        <div class="row justify-content-center my-2">
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-3">
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fvatgoodies%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId=163357953107" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-3">
                 <p>VATGoodies.com - version {{ config('app.version') }}</p>
             </div>
         </div>
