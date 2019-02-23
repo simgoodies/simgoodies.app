@@ -1,6 +1,7 @@
 [![StyleCI](https://github.styleci.io/repos/121784641/shield?branch=develop)](https://github.styleci.io/repos/121784641)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/367a3d1bf509419aa1942d51c9fcb3c0)](https://www.codacy.com/app/roelgonzalez/vatgoodies.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vatsimgoodies/vatgoodies.com&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Discord](https://img.shields.io/discord/545254906257342493.svg?color=7289DA&label=Discord&style=popout)
 
 
 ## VATGoodies.com
@@ -10,6 +11,11 @@ The official github repository for [VATGoodies.com](https://vatgoodies.com)
 ## What is VATGoodies?
 
 VATGoodies.com is a place where you will find various goodies that will give you an enhanced experience with [VATSIM](https://vatsim.net).
+
+### Socials
+- Join our conversation on Discord here: https://discord.gg/aQkKcf5
+- Like our facebook page here: https://www.facebook.com/vatgoodies/
+- Collaborate on our idea wall here: https://trello.com/b/xC7d3XpX
 
 ## The goodies
 At this time there is currently only 1 goodie however expect a lot more in the future. Suggestions are also welcome.
