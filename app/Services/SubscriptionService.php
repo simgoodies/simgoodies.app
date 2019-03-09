@@ -4,9 +4,9 @@ namespace App\Services;
 
 use App\Models\Subscription;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ConfirmYourSubscription;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\StoreSubscription;
+use App\Mail\ConfirmYourSubscriptionMailable;
 
 class SubscriptionService
 {
@@ -17,7 +17,7 @@ class SubscriptionService
         $subscription->token = md5(now()->timestamp);
         $subscription->save();
 
-        Mail::to($request->email)->send(new ConfirmYourSubscription($subscription->token));
+        Mail::to($request->email)->send(new ConfirmYourSubscriptionMailable($subscription->token));
 
         Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com. Please check your inbox to confirm your subscription.');
 

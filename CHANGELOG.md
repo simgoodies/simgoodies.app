@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Nothing yet...
 
+## [1.0.1]
+### Fixed
+- Dependency on env() removed in ConfirmYourSubscriptionMailable
+
 ## [1.0.0] - 2019-02-27
 ### Added
 - Added Changelog
@@ -14,5 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Back-ups are no longer including all application code files (only database)
 
-[Unreleased]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v0.3.2...v1.0.0

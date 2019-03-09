@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Mail\ConfirmYourSubscription;
+use App\Mail\ConfirmYourSubscriptionMailable;
 use App\Models\Subscription;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -17,28 +17,27 @@ class SubscriptionTest extends TestCase
     use WithoutMiddleware;
 
     /** @test */
-    function it_can_subscribe_to_stay_posted()
+    public function it_can_subscribe_to_stay_posted()
     {
         $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'interested@example.org'
         ]);
 
-        $subscription = Subscription::all()->first();
+        $subscriptions = Subscription::all();
 
-        $this->assertCount(1, Subscription::all());
-        $this->assertEquals('roelgonzalez@example.org', Subscription::find(1)->email);
-        $this->assertEquals(false, $subscription->confirmed);
+        $this->assertCount(1, $subscriptions);
+        $this->assertEquals('interested@example.org', $subscriptions->first()->email);
     }
 
     /** @test */
-    function it_can_not_subscribe_twice()
+    public function it_can_not_subscribe_twice()
     {
         $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'interested@example.org'
         ]);
 
         $response = $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
+            'email' => 'interested@example.org'
         ]);
 
         $response->assertSessionHasErrors('email');
@@ -47,11 +46,11 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    function it_can_confirm_its_subscription()
+    public function it_can_confirm_its_subscription()
     {
         $this->withoutExceptionHandling();
 
-        factory('App\Models\Subscription')->create([
+        factory(Subscription::class)->create([
             'token' => $token = md5(now()->timestamp),
             'confirmed' => false
         ]);
@@ -67,7 +66,7 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    function it_can_send_an_email_for_confirmation()
+    public function it_can_send_an_email_for_confirmation()
     {
         Mail::fake();
 
@@ -75,6 +74,6 @@ class SubscriptionTest extends TestCase
             'email' => 'roelgonzalez@example.org'
         ]);
 
-        Mail::assertSent(ConfirmYourSubscription::class);
+        Mail::assertSent(ConfirmYourSubscriptionMailable::class);
     }
 }

@@ -6,10 +6,15 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ConfirmYourSubscription extends Mailable
+class ConfirmYourSubscriptionMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
+    /**
+     * This is the token used for the confirmation of the e-mail
+     *
+     * @var string
+     */
     protected $token;
 
     /**
@@ -20,6 +25,17 @@ class ConfirmYourSubscription extends Mailable
     public function __construct($token)
     {
         $this->token = $token;
+        
+        $this->populateMail();
+    }
+
+    private function populateMail()
+    {
+        $this->subject('Confirm your subscription to VATGoodies');
+        $this->markdown('emails.subscriptions.confirm');
+        $this->with([
+            'token' => $this->token,
+        ]);
     }
 
     /**
@@ -29,8 +45,6 @@ class ConfirmYourSubscription extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
-            ->subject('Confirm your subscription to VATGoodies')
-            ->markdown('emails.subscriptions.confirm', ['token' => $this->token]);
+        return $this;
     }
 }

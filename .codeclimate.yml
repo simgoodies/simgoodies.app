@@ -1,0 +1,10 @@
+plugins:
+  phpmd:
+    enabled: true
+    checks:
+      Naming/LongVariable:
+        enabled: false
+      Naming/ShortVariable:
+        enabled: false
+      CleanCode/StaticAccess:
+        enabled: false
