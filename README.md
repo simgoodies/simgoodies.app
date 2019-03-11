@@ -14,7 +14,7 @@ The official github repository for [VATGoodies.com](https://vatgoodies.com)
 VATGoodies.com is a place where you will find various goodies that will give you an enhanced experience with [VATSIM](https://vatsim.net).
 
 ### Socials
-- Join our conversation on Discord here: https://discord.gg/aQkKcf5
+- Join our conversation on Discord here: https://vatgoodies.com/discord
 - Like our facebook page here: https://www.facebook.com/vatgoodies/
 - Collaborate on our idea wall here: https://trello.com/b/xC7d3XpX
 

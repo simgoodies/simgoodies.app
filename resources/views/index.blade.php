@@ -124,7 +124,7 @@
         <br>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
-                <a href="https://discord.gg/aQkKcf5"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}" alt="Join us on Discord"></a>
+                <a href="discord"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}" alt="Join us on Discord"></a>
             </div>
             <div class="col-md-3">
                 <a class="github-button" href="https://github.com/vatsimgoodies/vatsim-real-ops" data-size="large" data-show-count="true" aria-label="Star vatsimgoodies/vatsim-real-ops on GitHub">Star on GitHub!</a>

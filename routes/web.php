@@ -16,3 +16,6 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 Route::get('/', ['uses' => 'LandingPageController@index', 'as' => 'landing.show']);
 Route::post('/', ['uses' => 'SubscriptionController@store', 'as' => 'subscription.store'])->middleware(ProtectAgainstSpam::class);
 Route::get('confirm-subscription/{token}', ['uses' => 'SubscriptionConfirmationController@store', 'as' => 'confirmation.store']);
+Route::get('discord', function () {
+    return redirect('https://discord.gg/aQkKcf5');
+});
