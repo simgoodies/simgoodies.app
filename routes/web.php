@@ -11,11 +11,9 @@
 |
 */
 
-use Spatie\Honeypot\ProtectAgainstSpam;
-
 Route::get('/', ['uses' => 'LandingPageController@index', 'as' => 'landing.show']);
-Route::post('/', ['uses' => 'SubscriptionController@store', 'as' => 'subscription.store'])->middleware(ProtectAgainstSpam::class);
-Route::get('confirm-subscription/{token}', ['uses' => 'SubscriptionConfirmationController@store', 'as' => 'confirmation.store']);
+Route::post('/', ['uses' => 'SubscriptionRequestController@store', 'as' => 'subscription-request.store'])->middleware('spam-protection');
+Route::get('confirm-subscription/{token}', ['uses' => 'SubscriptionController@store', 'as' => 'subscription.store']);
 Route::get('discord', function () {
     return redirect('https://discord.gg/aQkKcf5');
 });

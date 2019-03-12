@@ -85,7 +85,7 @@
                             @endforeach
                         </div>
                     @endif
-                    <form action="{{ route('subscription.store') }}" method="post">
+                    <form action="{{ route('subscription-request.store') }}" method="post">
                         {{ csrf_field() }}
                         @honeypot
                         <div class="row mt-md-n2">

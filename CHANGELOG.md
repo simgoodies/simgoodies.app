@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Nothing yet...
 
+## [1.1.0](https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.2..v1.1.0)
+### Added
+Integration with EmailOctopus API.
+
 ## [1.0.2](https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.1...v1.0.2) - 2019-03-11
 ### Added
 Dynamic discord link: https://vatgoodies.com/discord
@@ -22,4 +26,4 @@ Dynamic discord link: https://vatgoodies.com/discord
 ### Changed
 - Back-ups are no longer including all application code files (only database)
 
-[Unreleased]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.1.0...HEAD

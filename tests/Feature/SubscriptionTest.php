@@ -2,53 +2,56 @@
 
 namespace Tests\Feature;
 
-use App\Mail\ConfirmYourSubscriptionMailable;
-use App\Models\Subscription;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Support\Facades\Mail;
+use Mockery;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Mockery\MockInterface;
+use App\Models\Subscription;
+use App\Libraries\EmailOctopusApi;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConfirmYourSubscriptionMailable;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class SubscriptionTest extends TestCase
 {
     use DatabaseMigrations;
-    use WithoutMiddleware;
-
-    /** @test */
-    public function it_can_subscribe_to_stay_posted()
+    
+    /** @var MockInterface */
+    protected $emailOctopusApi;
+    
+    protected function setUp()
     {
+        parent::setUp();
+        
+        $this->emailOctopusApi = Mockery::mock(EmailOctopusApi::class);
+        $this->emailOctopusApi = $this->app->instance(EmailOctopusApi::class, $this->emailOctopusApi);
+        config()->set('honeypot.enabled', false);
+    }
+
+    public function testItCanRequestToSubscribeToStayPosted()
+    {
+        Mail::fake();
+        
         $this->post('/', [
-            'email' => 'interested@example.org'
+            'email' => 'interested@example.com'
         ]);
 
         $subscriptions = Subscription::all();
+        
+        Mail::assertSent(ConfirmYourSubscriptionMailable::class);
 
         $this->assertCount(1, $subscriptions);
-        $this->assertEquals('interested@example.org', $subscriptions->first()->email);
+        $this->assertEquals('interested@example.com', $subscriptions->first()->email);
+        $this->assertFalse((bool) $subscriptions->first()->confirmed);
     }
-
-    /** @test */
-    public function it_can_not_subscribe_twice()
-    {
-        $this->post('/', [
-            'email' => 'interested@example.org'
-        ]);
-
-        $response = $this->post('/', [
-            'email' => 'interested@example.org'
-        ]);
-
-        $response->assertSessionHasErrors('email');
-
-        $this->assertCount(1, Subscription::all());
-    }
-
-    /** @test */
-    public function it_can_confirm_its_subscription()
+    
+    public function testItCanConfirmItsSubscription()
     {
         $this->withoutExceptionHandling();
+        $this->emailOctopusApi->shouldReceive('createContactOfAList')
+            ->andReturn(
+                File::get(base_path('tests/stubs/email-octopus-api/create-contact-of-a-list/success.json'))
+            );
 
         factory(Subscription::class)->create([
             'token' => $token = md5(now()->timestamp),
@@ -65,15 +68,13 @@ class SubscriptionTest extends TestCase
         $this->assertEquals(true, $confirmedSubscription->confirmed);
     }
 
-    /** @test */
-    public function it_can_send_an_email_for_confirmation()
+    public function testItCannotSubscribeTwice()
     {
-        Mail::fake();
+        factory(Subscription::class)->create(['email' => 'interested@example.com']);
+        
+        $response = $this->post('/', ['email' => 'interested@example.com']);
 
-        $this->post('/', [
-            'email' => 'roelgonzalez@example.org'
-        ]);
-
-        Mail::assertSent(ConfirmYourSubscriptionMailable::class);
+        $response->assertSessionHasErrors('email');
+        $this->assertCount(1, Subscription::all());
     }
 }

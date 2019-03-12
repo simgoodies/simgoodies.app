@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Services\SubscriptionService;
+use App\Http\Requests\StoreSubscriptionRequest;
 
-class SubscriptionController extends Controller
+class SubscriptionRequestController extends Controller
 {
+    /**
+     * @var SubscriptionService
+     */
     protected $subscriptionService;
     
     public function __construct(SubscriptionService $subscriptionService)
@@ -14,9 +17,9 @@ class SubscriptionController extends Controller
         $this->subscriptionService = $subscriptionService;
     }
 
-    public function store(Request $request, string $token)
+    public function store(StoreSubscriptionRequest $request)
     {
-        $this->subscriptionService->storeSubscription($request, $token);
+        $this->subscriptionService->storeSubscriptionRequest($request);
 
         return redirect()->route('landing.show');
     }
