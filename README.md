@@ -1,7 +1,9 @@
+![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/vatsimgoodies/vatgoodies.com.svg?label=version)
+![Goodies](https://img.shields.io/badge/goodies-1-blue.svg)
 [![StyleCI](https://github.styleci.io/repos/121784641/shield?branch=master)](https://github.styleci.io/repos/121784641)
 [![Maintainability](https://api.codeclimate.com/v1/badges/437bc5f2ee5dad338cc1/maintainability)](https://codeclimate.com/github/vatsimgoodies/vatgoodies.com/maintainability)
+[![Discord](https://img.shields.io/discord/545254906257342493.svg?color=7289DA&label=Discord&style=popout)](https://vatgoodies.com/discord)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Discord](https://img.shields.io/discord/545254906257342493.svg?color=7289DA&label=Discord&style=popout)](https://discord.gg/aQkKcf5)
 
 
 ## VATGoodies.com

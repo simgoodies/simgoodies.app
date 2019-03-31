@@ -9,26 +9,27 @@
 
     <!-- Google Analytics -->
 
-    @if (config('app.env') === 'production')
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134452334-1"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
+@if (config('app.env') === 'production')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134452334-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-                gtag('js', new Date());
+            gtag('js', new Date());
 
-                gtag('config', 'UA-134452334-1');
-            </script>
+            gtag('config', 'UA-134452334-1');
+        </script>
     @endif
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css"
+          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script>
-        window.addEventListener("load", function(){
+        window.addEventListener("load", function () {
             window.cookieconsent.initialise({
                 "palette": {
                     "popup": {
@@ -41,10 +42,11 @@
                 },
                 "theme": "classic",
                 "position": "bottom-right"
-            })});
+            })
+        });
     </script>
 
-<!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -65,28 +67,65 @@
 <body>
 <div class="container">
     <div class="content-wrapper">
-        <div class="row">
-            <div class="offset-md-1 col-md-10">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
                 <img src="images/logo/main-logo.png" alt="VATGoodies Logo" width="800" height="400"
                      class="img-fluid">
             </div>
-        </div>
-        <div class="row">
-            <div class="offset-md-4 col-md-8">
-                <h2>presents Real Ops!</h2>
+            <div class="col-md-10 text-center">
+                <h2>presents the following goodies</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="offset-md-3 col-md-6">
-                <p>VATGoodies Real Ops will allow your FIR / ARTCC to organize the real ops event that you always wanted
-                    to organize! Organize your event, place the flights, watch them be booked and enjoy real ops the
-                    way it should be enjoyed!</p>
-                <ul>
-                    <li>Easily organize and manage your real ops event!</li>
-                    <li>No hassle flight booking for pilots!</li>
-                    <li>Everyone uses VATSIM SSO for login! (pending)</li>
-                    <li>and many awesome ideas in the pipeline!</li>
-                </ul>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 my-2">
+                <div class="card bg-light">
+                    <img class="card-img-top img-fluid" src="{{ asset('images/goodies/realops-by-vatgoodies.jpg') }}"
+                         alt="Real Ops by VATGoodies Image">
+                    <div class="card-body">
+                        <h4 class="card-title">Real Ops by VATGoodies</h4>
+                        <p class="card-text">allows your FIR / ARTCC to organize the real ops event that you always
+                            wanted
+                            to organize! Organize your event, place the flights, watch them be booked and enjoy real ops
+                            the
+                            way it should be enjoyed!</p>
+                        <a href="https://realops.vatgoodies.com/" class="btn btn-dark btn-block">Check out goodie...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-2">
+                <div class="card bg-light">
+                    <img class="card-img-top img-fluid" src="{{ asset('images/goodies/atc.jpg') }}"
+                         alt="Available to Control">
+                    <div class="card-body">
+                        <h4 class="card-title m-0">Available To Control</h4>
+                        <p class="card-text"><span class="badge badge-info badge-pill">Coming Soon</span></p>
+                        <p class="card-text">eases your workload when it comes to making your event roster. Figuring out
+                            who wants to control what and deciding who actually gets to control what on an event becomes
+                            a fun task.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 text-center">
+                <div class="card">
+                    <div class="card-header">
+                        Goal of VATGoodies
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Our goal is very simple.</p>
+                        <p class="card-text">
+                            Make sure the tedious and/or difficult tasks are brought down to a minimum, when you want 
+                            run events for the VATSIM community. (Expect goodies in non-event aspects also)
+                        </p>
+                        <p class="card-text">
+                            The goodies are here to reduce workload so that you can focus more on enjoying!
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="row justify-content-center">
@@ -120,9 +159,11 @@
                     </form>
                     <div class="row mt-2">
                         <div class="col-md-12">
-                            <a class="typeform-share link btn btn-success btn-block text-da" href="https://rolgonzalez.typeform.com/to/CjREly"
+                            <a class="typeform-share link btn btn-success btn-block text-da"
+                               href="https://rolgonzalez.typeform.com/to/CjREly"
                                data-mode="popup"
-                               data-hide-headers=true data-hide-footer=true data-submit-close-delay="5" target="_blank">Contact VATGoodies</a>
+                               data-hide-headers=true data-hide-footer=true data-submit-close-delay="5" target="_blank">Contact
+                                VATGoodies</a>
                             <script> (function () {
                                     var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
                                         gt = d.getElementsByTagName, id = "typef_orm_share",
@@ -140,20 +181,29 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-8">
+                <a class="twitter-timeline" href="https://twitter.com/vatgoodies?ref_src=twsrc%5Etfw">Tweets by vatgoodies</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
         <br>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
-                <a href="discord"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}" alt="Join us on Discord"></a>
+                <a href="discord"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}"
+                                       alt="Join us on Discord"></a>
             </div>
             <div class="col-md-3">
-                <a class="github-button" href="https://github.com/vatsimgoodies/vatsim-real-ops" data-size="large" data-show-count="true" aria-label="Star vatsimgoodies/vatsim-real-ops on GitHub">Star on GitHub!</a>
+                <a class="github-button" href="https://github.com/vatsimgoodies/vatsim-real-ops" data-size="large"
+                   data-show-count="true" aria-label="Star vatsimgoodies/vatsim-real-ops on GitHub">Star on GitHub!</a>
             </div>
         </div>
         <div class="row justify-content-center my-2">
         </div>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
-                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fvatgoodies%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId=163357953107" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fvatgoodies%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId=163357953107"
+                        width="auto" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
         <div class="row justify-content-center my-2">
