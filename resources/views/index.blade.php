@@ -186,19 +186,12 @@
                 <a href="discord"><img class="img-fluid" src="{{ asset('images/discord-button.png') }}"
                                        alt="Join us on Discord"></a>
             </div>
-            <div class="col-md-3">
-                <a class="github-button" href="https://github.com/vatsimgoodies/vatsim-real-ops" data-size="large"
-                   data-show-count="true" aria-label="Star vatsimgoodies/vatsim-real-ops on GitHub">Star on GitHub!</a>
+            <div class="col-md-3 my-auto">
+                <a class="github-button" href="https://github.com/simgoodies/simgoodies.app" data-size="large"
+                   data-show-count="true" aria-label="Star simgoodies on GitHub">Star on GitHub!</a>
             </div>
         </div>
         <div class="row justify-content-center my-2">
-        </div>
-        <div class="row justify-content-center my-2">
-            <div class="col-md-3">
-                <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fvatgoodies%2F&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId=163357953107"
-                        width="auto" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowTransparency="true" allow="encrypted-media"></iframe>
-            </div>
         </div>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
