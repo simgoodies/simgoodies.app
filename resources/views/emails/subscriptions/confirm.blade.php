@@ -1,7 +1,7 @@
 @component('mail::message')
-# VATGoodies Newsletter Subscription
+# Simgoodies.app Newsletter Subscription
 
-You have requested to stay up to date of events happening surrounding VATGoodies, confirm your subscription by clicking the button below.
+You have requested to stay up to date of events happening surrounding Simgoodies, confirm your subscription by clicking the button below.
 
 @component('mail::button', ['url' => url('confirm-subscription/' . $token)])
 Confirm subscription

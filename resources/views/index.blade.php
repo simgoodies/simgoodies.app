@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>VATGoodies.com - let us lift the weight!</title> <!-- CHANGE THIS TITTLE FOR EACH PAGE -->
+    <title>Simgoodies - let us lift the weight!</title> <!-- CHANGE THIS TITTLE FOR EACH PAGE -->
 
     <!-- Google Analytics -->
 
@@ -69,7 +69,7 @@
     <div class="content-wrapper">
         <div class="row justify-content-center">
             <div class="col-md-10 text-center">
-                <img src="images/logo/main-logo.png" alt="VATGoodies Logo" width="800" height="400"
+                <img src="images/logo/simgoodies-logo.png" alt="Simgoodies Logo" width="800" height="400"
                      class="img-fluid">
             </div>
             <div class="col-md-10 text-center">
@@ -83,13 +83,13 @@
                     <img class="card-img-top img-fluid" src="{{ asset('images/goodies/realops-by-vatgoodies.jpg') }}"
                          alt="Real Ops by VATGoodies Image">
                     <div class="card-body">
-                        <h4 class="card-title">Real Ops by VATGoodies</h4>
+                        <h4 class="card-title m-0">Real Ops</h4>
+                        <p class="card-text"><span class="badge badge-success badge-pill">Launching Soon</span></p>
                         <p class="card-text">allows your FIR / ARTCC to organize the real ops event that you always
                             wanted
                             to organize! Organize your event, place the flights, watch them be booked and enjoy real ops
                             the
                             way it should be enjoyed!</p>
-                        <a href="https://realops.vatgoodies.com/" class="btn btn-dark btn-block">Check out goodie...</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                          alt="Available to Control">
                     <div class="card-body">
                         <h4 class="card-title m-0">Available To Control</h4>
-                        <p class="card-text"><span class="badge badge-info badge-pill">Coming Soon</span></p>
+                        <p class="card-text"><span class="badge badge-info badge-pill">Planned</span></p>
                         <p class="card-text">eases your workload when it comes to making your event roster. Figuring out
                             who wants to control what and deciding who actually gets to control what on an event becomes
                             a fun task.</p>
@@ -112,13 +112,12 @@
             <div class="col-md-8 text-center">
                 <div class="card">
                     <div class="card-header">
-                        Goal of VATGoodies
+                        Goal of Simgoodies
                     </div>
                     <div class="card-body">
                         <p class="card-text">Our goal is very simple.</p>
                         <p class="card-text">
-                            Make sure the tedious and/or difficult tasks are brought down to a minimum, when you want 
-                            run events for the VATSIM community. (Expect goodies in non-event aspects also)
+                            Create goodies (web apps) that can be used by the (online) flight simulator community.
                         </p>
                         <p class="card-text">
                             The goodies are here to reduce workload so that you can focus more on enjoying!
@@ -181,11 +180,6 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center my-2">
-            <div class="col-md-8">
-                <a class="twitter-timeline" href="https://twitter.com/vatgoodies?ref_src=twsrc%5Etfw">Tweets by vatgoodies</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        </div>
         <br>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
@@ -208,7 +202,7 @@
         </div>
         <div class="row justify-content-center my-2">
             <div class="col-md-3">
-                <p>VATGoodies.com - version {{ config('app.version') }}</p>
+                <p>simgoodies.app - version {{ config('app.version') }}</p>
             </div>
         </div>
     </div>

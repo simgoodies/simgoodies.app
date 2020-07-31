@@ -5,7 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Nothing yet
+### Added
+- References to Simgoodies
+### Changed
+- Logo
+- Landing page text
+### Removed
+- Twitter Feed
+- References to VATGoodies
 
 ## [1.2.0](https://github.com/vatsimgoodies/vatgoodies.com/compare/v1.1.0..v1.2.0)
 ### Added

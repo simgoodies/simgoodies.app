@@ -6,6 +6,6 @@ return [
         'base-api-url' => 'https://emailoctopus.com/api/1.5',
     ],
     'contact-lists' => [
-        'vatgoodies_newsletter' => env('EMAIL_OCTOPUS_CONTACT_LISTS_VATGOODIES_NEWSLETTER'),
+        'simgoodies_newsletter' => env('EMAIL_OCTOPUS_CONTACT_LISTS_SIMGOODIES_NEWSLETTER'),
     ],
 ];

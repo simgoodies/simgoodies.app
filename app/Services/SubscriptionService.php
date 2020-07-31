@@ -25,7 +25,7 @@ class SubscriptionService
     public function __construct(EmailOctopusApi $emailOctopusApi)
     {
         $this->emailOctopusApi = $emailOctopusApi;
-        $this->contactListId = config('emailoctopus.contact-lists.vatgoodies_newsletter');
+        $this->contactListId = config('emailoctopus.contact-lists.simgoodies_newsletter');
     }
 
     /**
@@ -45,7 +45,7 @@ class SubscriptionService
 
         Mail::to($request->email)->send(new ConfirmYourSubscriptionMailable($subscription->token));
 
-        Session::flash('success', 'You have successfully subscribed to stay posted about VATGoodies.com. Please check your inbox to confirm your subscription.');
+        Session::flash('success', 'You have successfully subscribed to stay posted about Simgoodies. Please check your inbox to confirm your subscription.');
 
         return $subscription;
     }
@@ -76,7 +76,7 @@ class SubscriptionService
         $subscription->confirmed = true;
         $subscription->save();
 
-        Session::flash('success', 'You have successfully confirmed your subscription to stay posted about VATGoodies.com');
+        Session::flash('success', 'You have successfully confirmed your subscription to stay posted about Simgoodies');
 
         return $subscription;
     }

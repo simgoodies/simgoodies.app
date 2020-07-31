@@ -6,22 +6,23 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
-## VATGoodies.com
+## Simgoodies.app
 
-The official github repository for [VATGoodies.com](https://vatgoodies.com)
+The official github repository for [simgoodies.app](https://simgoodies.app)
 
-## What is VATGoodies?
+## What is Simgoodies?
 
-VATGoodies.com is a place where you will find various goodies that will give you an enhanced experience with [VATSIM](https://vatsim.net).
+Create goodies (web apps) that can be used by the (online) flight simulator community.
+
+The goodies are here to reduce workload so that you can focus more on enjoying!
 
 ### Socials
-- Join our conversation on Discord here: https://vatgoodies.com/discord
-- Like our facebook page here: https://www.facebook.com/vatgoodies/
-- Collaborate on our idea wall here: https://trello.com/b/xC7d3XpX
+- Join our conversation on Discord here: https://simgoodies.app/discord
+- Like our facebook page here: https://www.facebook.com/simgoodiesapp/
 
 ## The goodies
 At this time there is currently only 1 goodie however expect a lot more in the future. Suggestions are also welcome.
-- [Real Ops by VATGoodies](https://github.com/vatsimgoodies/vatsim-real-ops)
+- [Real Ops](https://github.com/vatsimgoodies/vatsim-real-ops)
 
 ## Built with
 * [Laravel 5.6](https://laravel.com) - The web framework used
@@ -30,7 +31,6 @@ At this time there is currently only 1 goodie however expect a lot more in the f
 
 ## Credits
 - [Roël Gonzalez](https://github.com/roelgonzalez/)
-- Justin Edwards - Logo creation
 - [All Contributors](../../contributors)
 
 ## Contact or Suggestions:
