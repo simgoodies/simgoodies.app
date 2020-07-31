@@ -1,7 +1,5 @@
 /node_modules
 /public/hot
-/public/css
-/public/js
 /public/storage
 /storage/*.key
 /vendor
@@ -14,5 +12,4 @@ yarn-error.log
 .env
 .phpunit.result.cache
 .env.testing
-/bk-Envoy.blade.php
-/Envoy.blade.php
+deploy.php
