@@ -1,8 +1,6 @@
-![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/vatsimgoodies/vatgoodies.com.svg?label=version)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/simgoodies/simgoodies.app.svg?label=version)
 ![Goodies](https://img.shields.io/badge/goodies-1-blue.svg)
-[![StyleCI](https://github.styleci.io/repos/121784641/shield?branch=master)](https://github.styleci.io/repos/121784641)
-[![Maintainability](https://api.codeclimate.com/v1/badges/437bc5f2ee5dad338cc1/maintainability)](https://codeclimate.com/github/vatsimgoodies/vatgoodies.com/maintainability)
-[![Discord](https://img.shields.io/discord/545254906257342493.svg?color=7289DA&label=Discord&style=popout)](https://vatgoodies.com/discord)
+[![Discord](https://img.shields.io/discord/545254906257342493.svg?color=7289DA&label=Discord&style=popout)](https://simgoodies.app/discord)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -22,7 +20,7 @@ The goodies are here to reduce workload so that you can focus more on enjoying!
 
 ## The goodies
 At this time there is currently only 1 goodie however expect a lot more in the future. Suggestions are also welcome.
-- [Real Ops](https://github.com/vatsimgoodies/vatsim-real-ops)
+- [Real Ops](https://github.com/simgoodies/vatsim-real-ops)
 
 ## Built with
 * [Laravel 5.6](https://laravel.com) - The web framework used

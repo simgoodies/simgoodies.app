@@ -31,7 +31,7 @@ class ConfirmYourSubscriptionMailable extends Mailable
 
     private function populateMail()
     {
-        $this->subject('Confirm your subscription to VATGoodies');
+        $this->subject('Confirm your subscription to Simgoodies');
         $this->markdown('emails.subscriptions.confirm');
         $this->with([
             'token' => $this->token,

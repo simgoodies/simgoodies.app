@@ -81,7 +81,7 @@
             <div class="col-md-4 my-2">
                 <div class="card bg-light">
                     <img class="card-img-top img-fluid" src="{{ asset('images/goodies/realops-by-vatgoodies.jpg') }}"
-                         alt="Real Ops by VATGoodies Image">
+                         alt="Real Ops Image">
                     <div class="card-body">
                         <h4 class="card-title m-0">Real Ops</h4>
                         <p class="card-text"><span class="badge badge-success badge-pill">Launching Soon</span></p>
@@ -162,7 +162,7 @@
                                href="https://rolgonzalez.typeform.com/to/CjREly"
                                data-mode="popup"
                                data-hide-headers=true data-hide-footer=true data-submit-close-delay="5" target="_blank">Contact
-                                VATGoodies</a>
+                                Simgoodies</a>
                             <script> (function () {
                                     var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
                                         gt = d.getElementsByTagName, id = "typef_orm_share",
