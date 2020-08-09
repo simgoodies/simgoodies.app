@@ -84,12 +84,15 @@
                          alt="Real Ops Image">
                     <div class="card-body">
                         <h4 class="card-title m-0">Real Ops</h4>
-                        <p class="card-text"><span class="badge badge-success badge-pill">Launching Soon</span></p>
+                        <p class="card-text"><span class="badge badge-warning badge-pill">Just launched!</span></p>
                         <p class="card-text">allows your FIR / ARTCC to organize the real ops event that you always
                             wanted
                             to organize! Organize your event, place the flights, watch them be booked and enjoy real ops
                             the
                             way it should be enjoyed!</p>
+                        <p class="card-text">
+                            <a href="https://realops.simgoodies.app" class="btn btn-secondary">Visit</a>
+                        </p>
                     </div>
                 </div>
             </div>
