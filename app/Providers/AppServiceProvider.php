@@ -7,25 +7,18 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services.
-     *
-     * @return void
+     * Register any application services.
      */
-    public function boot()
+    public function register(): void
     {
         //
     }
 
     /**
-     * Register any application services.
-     *
-     * @return void
+     * Bootstrap any application services.
      */
-    public function register()
+    public function boot(): void
     {
-        if (in_array($this->app->environment(), ['production', 'staging'])) {
-            $this->app->alias('bugsnag.multi', \Illuminate\Contracts\Logging\Log::class);
-            $this->app->alias('bugsnag.multi', \Psr\Log\LoggerInterface::class);
-        }
+        //
     }
 }
